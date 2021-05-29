@@ -15,22 +15,22 @@ function doMathClicked () {
   var answer = 0
 
   if (firstNumber > 0 && secondNumber > 0) {
-    while (addedNumber <= secondNumber) {
+    while (addedNumber < secondNumber) {
       addedNumber = addedNumber + 1;
       answer = answer + firstNumber;
     }
   } else if (firstNumber < 0 && secondNumber < 0) {
-    while (addedNumber >= secondNumber) {
+    while (addedNumber > secondNumber) {
       addedNumber = addedNumber - 1;
-      answer = answer + firstNumber;
+      answer = answer - firstNumber;
     }
   } else if (firstNumber > 0 && secondNumber < 0) {
-    while (addedNumber >= secondNumber) {
+    while (addedNumber > secondNumber) {
       addedNumber = addedNumber - 1;
       answer = answer - firstNumber;
     }
   } else if (firstNumber < 0 && secondNumber > 0) {
-    while (addedNumber <= secondNumber) {
+    while (addedNumber < secondNumber) {
       addedNumber = addedNumber + 1;
       answer = answer + firstNumber;
     }
