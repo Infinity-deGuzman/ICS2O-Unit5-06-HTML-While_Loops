@@ -14,12 +14,18 @@ function doMathClicked () {
   var addedNumber = 0
   var answer = 0
 
-  while (addedNumber <= secondNumber) {
+  while (addedNumber <= secondNumber || addedNumber >= secondNumber) {
     if (firstNumber > 0 && secondNumber > 0) {
       addedNumber = addedNumber + 1;
       answer = answer + firstNumber;
-    } else if (firstNumber < 0 && secondNumber < 0){
+    } else if (firstNumber < 0 && secondNumber < 0) {
       addedNumber = addedNumber - 1;
+      answer = answer - firstNumber;
+    } else if (firstNumber > 0 && secondNumber < 0) {
+      addedNumber = addedNumber - 1;
+      answer = answer - firstNumber;
+    } else if (firstNumber < 0 && secondNumber > 0) {
+      addedNumber = addedNumber + 1;
       answer = answer + firstNumber;
     }
   }
